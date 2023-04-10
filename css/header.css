@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+header {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.img_Menu {
+    height: 60px;
+    padding-top: 5px;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-51%);
+}
+
+.Logo {
+    width: 10%;
+    height: 80%;
+}
+
+.Logo img {
+    padding: 10px 0 0 20px;
+    width: 70px;
+}
+
+.Menu nav {
+    float: right;
+    height: 100%;
+}
+
+.Menu nav ul {
+    display: inline-flex;
+}
+
+.Menu nav ul li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.Menu nav ul li a {
+    margin: 0px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.Menu nav ul li a:hover {
+    color: rgb(196, 55, 55);
+}
+
+.Ingreso {
+    width: 10%;
+    padding: 0 15px 0 0;
+}
+
+.Ingreso ul {
+    display: inline-flex;
+}
+
+.Ingreso ul li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 20px;
+    color: white;
+}
+
+.Ingreso ul li a {
+    margin: 0px 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.Ingreso ul li a:hover {
+    color: rgb(196, 55, 55);
+}
