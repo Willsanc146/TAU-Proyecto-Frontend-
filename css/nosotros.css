@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,700;0,800;1,600&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    height: auto;
+    background-color: black;
+    background-image: url("../img/fondo_about.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 80px;
+}
+
+#div_descript {
+    width: 80%;
+    height: 400px;
+    margin: 80px 10% 0 10%;
+    display: flex;
+}
+
+.descript h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.descript p {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    text-align: justify;
+}
+
+.illustration {
+    width: 60%;
+}
+
+.descript {
+    width: 50%;
+    height: 100%;
+}
+
+#div_descript .illustration img {
+    width: 100%;
+}
+
+#div-descript .descript {
+    padding-top: 180px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.social-media {
+    width: 350px;
+    float: right;
+}
+
+.social-media i {
+    color: rgb(255, 255, 255);
+    padding: 0px 20px;
+}
+
+@media screen and (max-width: 980px) {
+
+    body {
+        background-position-y: 40px;
+    }
+
+    #div_descript {
+        width: 95%;
+        margin: 100px 0 170px 2%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #div_descript p {
+        width: 100%;
+    }
+
+    .descript {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-position-y: 50px;
+    }
+
+    #div_descript {
+        margin: 100px 0 170px 2%;
+    }
+}
+
+@media screen and (max-width: 686px) {
+    #div_descript {
+        margin: 40px 2% 120px 2%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #div_descript {
+        margin: 20px 2% 120px 2%;
+    }
+}
