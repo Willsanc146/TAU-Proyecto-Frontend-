@@ -3,5 +3,5 @@
 session_start();
 session_destroy();
 
-header("location: ../pages/acc_intranet.html");
+header("location: ../acc_intranet.html");
 ?>

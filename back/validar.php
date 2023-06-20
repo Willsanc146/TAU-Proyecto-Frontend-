@@ -2,6 +2,20 @@
 
     include '../db/conexion.php';
 
+    function redirect($filename = "/")
+	{
+		if (!headers_sent()){
+			header('Location: '.$filename);
+		}else{
+			echo '<script type="text/javascript">';
+			echo 'window.location.href="'.$filename.'";';
+			echo '</script>';
+			echo '<noscript>';
+			echo '<meta http-equiv="refresh" content="0;url='.$filename.'" />';
+			echo '</noscript>';
+		}
+	}
+
     if(isset($_POST['inicio'])) {
         $correo = $_POST['correo'];
         $clave = $_POST['clave'];
@@ -16,14 +30,12 @@
             while ($captura = mysqli_fetch_array($consulta)) {
                 session_start();
                 $_SESSION['nombre']= $captura['nombre'];
-                $_SESSION['rol']= $captura['rol'];
                 $_SESSION['correo']= $captura['correo'];
-                $_SESSION['time'] = time();
             }
 
-            header('location:../aplicativo/home.php');
+            redirect("../back/home_intranet.php");
         }else{
-            header('location:../pages/acc_intranet.html');
+            header('location: ../acc_intranet.html');
         }
     }
 ?>

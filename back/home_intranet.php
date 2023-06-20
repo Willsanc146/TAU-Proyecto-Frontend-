@@ -2,20 +2,15 @@
 
     session_start();
 
-    include '../db/conexion.php';
-
-    if (!ISSET($_SESSION['nombre'])) {
-        header('location: ../aplicativo/home.php');
-    } else {
-
-        if ((time()-$_SESSION['time']) > 10) {
-            header('location: ../db/logout.php');
-        }
-    }
+	if(isset($_SESSION['nombre'])) {
+		header('location: ../acc_Intranet.html');
+	}else{
+        echo " ";
+	}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +25,9 @@
     <header>
         <a href="../index.html"><img src="../img/Logo.png" alt="Logo"></a>
         <h1>Autolavado Willsanc</h1>
-        <h5>cerrar sesión</h5>
+        <a href="../back/logout.php">
+            <h5>cerrar sesión</h5>
+        </a>
     </header>
 
     <main>
@@ -41,20 +38,17 @@
                         <h2>01</h2>
                         <h3>Combos</h3>
                         <p>Descripcion de la oferta de combos ofertados para todo tipo de vehículo</p>
-                        <a href="#">Ingresar</a>
+                        <a href="../back/combos.php">Ingresar</a>
                     </div>
                 </div>
             </div>
-
-            <?php
-                if($_SESSION['rol']== 1){?>
             <div class="card">
                 <div class="box">
                     <div class="content">
                         <h2>02</h2>
                         <h3>Lavado vehículos</h3>
                         <p>Ingreso de datos de los vehículos que ingresan a lavado.</p>
-                        <a href="#">Ingresar</a>
+                        <a href="../back/lavado_veh.php">Ingresar</a>
                     </div>
                 </div>
             </div>
@@ -91,11 +85,6 @@
                     </div>
                 </div>
             </div>
-            <?php
-                }else{
-                    echo'';
-                }
-            ?>
         </div>
     </main>
 </body>

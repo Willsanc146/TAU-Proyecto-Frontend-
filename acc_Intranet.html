@@ -4,39 +4,56 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../css/reset.css" />
-		<link rel="stylesheet" href="../css/acc_intranet.css" />
-		<link rel="shortcut icon" href="../img/Icono.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/acc_intranet.css" />
+		<link rel="shortcut icon" href="img/Icono.ico" type="image/x-icon" />
 		<title>Autolavado</title>
 	</head>
 	<body>
+		<header>
+			<div>
+				<a href="index.html">Inicio</a>
+			</div>
+			<div>
+				<a href="back/close.php">Cerrar Sesion</a>
+			</div>
+		</header>
 		<h2>Autolavado WILLSANC</h2>
 		<div class="container" id="container">
 			<div class="form-container sign-up-container">
-				<form action="../back/register.php" method="POST">
+				<form action="back/register.php" method="POST">
 					<h1>Crear Cuenta</h1>
 					<div class="social-container">
-						<img src="../img/logo.png" alt="Imagen del Logo" />
+						<img src="img/logo.png" alt="Imagen del Logo" />
 					</div>
 					<span>Use el siguiente formulario para realizar el registro</span>
-					<input type="text" name="nombre" placeholder="Digite el nombre" />
-					<input type="email" name="correo" placeholder="Digite el Email" />
+					<input
+						type="text"
+						name="nombre"
+						placeholder="Digite el nombre"
+						required />
+					<input
+						type="email"
+						name="correo"
+						placeholder="Digite el Email"
+						required />
 					<input
 						type="password"
 						name="clave"
-						placeholder="Digite la contraseña" />
+						placeholder="Digite la contraseña"
+						required />
 					<button type="submit" name="registro">Registrarse</button>
 				</form>
 			</div>
 			<div class="form-container sign-in-container">
-				<form action="../back/validar.php" method="POST">
+				<form action="back/validar.php" method="POST">
 					<h1>Iniciar Sesión</h1>
 					<div class="social-container">
-						<img src="../img/logo.png" alt="Imagen del Logo" />
+						<img src="img/logo.png" alt="Imagen del Logo" />
 					</div>
 					<span>Ingrese su cuenta</span>
-					<input type="email" name="correo" placeholder="Email" />
-					<input type="password" name="clave" placeholder="Password" />
+					<input type="email" name="correo" placeholder="Email" required />
+					<input type="password" name="clave" placeholder="Password" required />
 					<button type="submit" name="inicio">Ingresar</button>
 				</form>
 			</div>
@@ -59,5 +76,5 @@
 			</div>
 		</div>
 	</body>
-	<script src="../js/acc_intranet.js"></script>
+	<script src="js/acc_intranet.js"></script>
 </html>

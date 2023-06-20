@@ -12,5 +12,5 @@
         $sql = mysqli_query($conexion,"INSERT INTO usuarios(nombre, correo, clave) VALUES ('$nombre','$correo','$clave_en')");
     }
 
-    header ('location:../pages/acc_intranet.html');
+    header ('location: ../acc_intranet.html');
 ?>
