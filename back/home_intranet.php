@@ -59,7 +59,7 @@
                         <h2>03</h2>
                         <h3>Parqueadero</h3>
                         <p>Ingreso de datos de los vehículos que ingresan a parqueadero.</p>
-                        <a href="#">Ingresar</a>
+                        <a href="../enDesarrollo.html">Ingresar</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         <h2>04</h2>
                         <h3>Ingreso colaboradores</h3>
                         <p>Ingreso de datos de los colaboradores de Autolavado Willsanc</p>
-                        <a href="#">Ingresar</a>
+                        <a href="../enDesarrollo.html">Ingresar</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                         <h2>05</h2>
                         <h3>Informe</h3>
                         <p>Presentación de informes de acuerdo a necesidad administrativa</p>
-                        <a href="#">Ingresar</a>
+                        <a href="../enDesarrollo.html">Ingresar</a>
                     </div>
                 </div>
             </div>
