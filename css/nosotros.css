@@ -5,7 +5,6 @@
 body {
     height: auto;
     background-color: black;
-    background-image: url("../img/fondo_about.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position-y: 80px;

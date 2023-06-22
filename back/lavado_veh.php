@@ -14,7 +14,7 @@ include '../db/conexion.php';
 
     // Calcular el offset para la consulta SQL
     $offset = ($paginaActual - 1) * $registrosPorPagina;
-    $querylavado = mysqli_query($conexion, "SELECT lavado_car.*, colaboradores.nombre, colaboradores.apellido FROM lavado_car INNER JOIN colaboradores ON lavado_car.colaborador = colaboradores.id LIMIT $registrosPorPagina OFFSET $offset");
+    $querylavado = mysqli_query($conexion, "SELECT lavado_car.*, colaboradores.nombre, colaboradores.apellido FROM lavado_car INNER JOIN colaboradores ON lavado_car.colaborador = colaboradores.id ORDER BY lavado_car.id DESC LIMIT $registrosPorPagina OFFSET $offset");
 
     // Consulta para obtener el total de registros
     $totalRegistros = mysqli_num_rows(mysqli_query($conexion, "SELECT * FROM lavado_car"));
@@ -37,7 +37,7 @@ include '../db/conexion.php';
 
 <body>
     <header>
-        <a href="../index.html"><img src="../img/Logo.png" alt="Logo"></a>
+        <a href="../back/home_intranet.php"><img src="../img/Logo.png" alt="Logo"></a>
         <h1>Autolavado Willsanc</h1>
         <a href="../back/logout.php">
             <h5>cerrar sesión</h5>
@@ -73,8 +73,20 @@ include '../db/conexion.php';
                             <option value="8">combo 8-motocicleta</option>
                         </select>
                         <select class="select_css" type="number" name="colaborador" id="colaborador">
-                            <option value="1">Luis Angel Guerrero</option>
-                            <option value="2">Antonio Luis Rosales</option>
+                            <option value="0" disabled selected>Seleccionar:</option>
+                            <?php
+                            // Obtener los colaboradores de la base de datos
+                            $queryColaboradores = mysqli_query($conexion, "SELECT * FROM colaboradores");
+                            
+                            while ($colaborador = mysqli_fetch_array($queryColaboradores)) {
+                                $idColaborador = $colaborador['id'];
+                                $nombreColaborador = $colaborador['nombre'];
+                                $apellidoColaborador = $colaborador['apellido'];
+                                
+                                // Mostrar cada colaborador como una opción en el select
+                                echo '<option value="'.$idColaborador.'">'.$nombreColaborador.' '.$apellidoColaborador.'</option>';
+                            }
+                            ?>
                         </select>
                         <input class="input_submit" type="submit" name="submit_car" value="guardar">
                     </form>

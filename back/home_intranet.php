@@ -70,7 +70,7 @@
                         <h2>04</h2>
                         <h3>Ingreso colaboradores</h3>
                         <p>Ingreso de datos de los colaboradores de Autolavado Willsanc</p>
-                        <a href="../enDesarrollo.html">Ingresar</a>
+                        <a href="../back/agregar_colaboradores.php">Ingresar</a>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 20-06-2023 a las 08:34:12
+-- Tiempo de generación: 22-06-2023 a las 05:11:05
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -32,7 +32,7 @@ CREATE TABLE `colaboradores` (
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `cc` int(255) NOT NULL,
-  `telefono` int(15) NOT NULL
+  `telefono` bigint(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -41,7 +41,10 @@ CREATE TABLE `colaboradores` (
 
 INSERT INTO `colaboradores` (`id`, `nombre`, `apellido`, `cc`, `telefono`) VALUES
 (1, 'Luis Angel', 'Gerrero', 10000000, 2147483647),
-(2, 'Antonio Luis', 'Rosales', 20000000, 2147483647);
+(2, 'Antonio Luis', 'Rosales', 20000000, 2147483647),
+(3, 'Maicol Giovanni', 'Salazar', 30000000, 2147483647),
+(4, 'carlos', 'cardenas', 40000000, 2147483647),
+(5, 'mauricio', 'Beltran', 50000000, 3215876584);
 
 -- --------------------------------------------------------
 
@@ -68,7 +71,8 @@ INSERT INTO `lavado_car` (`id`, `tipo`, `placa`, `combo`, `colaborador`) VALUES
 (4, 'motocicleta', 'AFE14C', 7, 2),
 (5, 'camioneta', 'CMY75J', 21, 1),
 (6, 'motocicleta', 'ZQK15F', 8, 1),
-(7, 'automovil', 'DFR14K', 4, 2);
+(7, 'automovil', 'DFR14K', 4, 2),
+(8, 'motocicleta', 'AFE15C', 6, 5);
 
 -- --------------------------------------------------------
 
@@ -122,13 +126,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `colaboradores`
 --
 ALTER TABLE `colaboradores`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `lavado_car`
 --
 ALTER TABLE `lavado_car`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
